@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 class RatingWidget extends StatelessWidget {
   const RatingWidget({
     super.key,
+    this.alignment = MainAxisAlignment.start,
   });
-
+  final MainAxisAlignment alignment;
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
+    return Row(
+      mainAxisAlignment: alignment,
+      children: const [
         Icon(
           Icons.star,
           size: 20,
